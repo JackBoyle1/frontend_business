@@ -1,11 +1,11 @@
 <template>
   <div class="landing">
-    <header>
+    <header class="text-white">
       <h1>Welcome to Boyle Solutions</h1>
       <p>Your Partner in Web Development</p>
     </header>
 
-    <section class="features">
+    <section class="features text-white">
       <div class="feature">
         <h2>Custom Web Development</h2>
         <p>We build tailored solutions to meet your unique business needs.</p>
@@ -20,14 +20,24 @@
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta text-white bg-gray-600 bg-opacity-30 rounded-full">
       <h2>Ready to get started?</h2>
       <p>Contact us today for a free consultation.</p>
-      <a href="/contact" class="cta-button">Contact Us</a>
+      <Button class="mt-3" name="Contact Us"></Button>
     </section>
   </div>
 </template>
-  
+
+<script>
+import Button from '@/components/Button.vue'
+
+export default {
+  components: {
+    Button,
+  }
+}
+</script>
+
 <style scoped>
 .landing {
   text-align: center;
@@ -50,16 +60,16 @@ header {
 }
 
 .cta {
-  background-color: #007BFF;
-  color: #fff;
   padding: 40px;
   text-align: center;
 }
 
-.cta-button {
-  background-color: #0056b3;
-  color: #fff;
-  padding: 10px 20px;
-  border: none
-}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .fade-in.active {
+    opacity: 1;
+  }
 </style>

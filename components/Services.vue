@@ -1,49 +1,9 @@
-<!-- <template>
-    <div>
-      <h1>Our Services</h1>
-      <div class="service">
-        <h2>Starter Package</h2>
-        <p>Perfect for personal websites and blogs.</p>
-        <p>Includes:</p>
-        <ul>
-          <li>Responsive Design</li>
-          <li>Up to 5 Pages</li>
-          <li>Contact Form</li>
-        </ul>
-        <p>Starting at $499</p>
-      </div>
-      <div class="service">
-        <h2>Business Package</h2>
-        <p>Ideal for small businesses.</p>
-        <p>Includes:</p>
-        <ul>
-          <li>Custom Design</li>
-          <li>Up to 10 Pages</li>
-          <li>Contact Form</li>
-          <li>Basic SEO</li>
-        </ul>
-        <p>Starting at $999</p>
-      </div>
-      <div class="service">
-        <h2>Premium Package</h2>
-        <p>For businesses with advanced needs.</p>
-        <p>Includes:</p>
-        <ul>
-          <li>Custom Design</li>
-          <li>Unlimited Pages</li>
-          <li>Contact Form</li>
-          <li>SEO Optimization</li>
-          <li>E-commerce Integration</li>
-        </ul>
-        <p>Starting at $1999</p>
-      </div>
-    </div>
-  </template> -->
   <template>
-    <div>
-      <h1>Our Services</h1>
-      <div class="service">
-        <h2>Starter Package</h2>
+  <div>
+    <h1 class="sm:text-2x1 md:text-3xl lg:text-3x1 font-bold text-center pb-4 text-white">Our Services</h1>
+    <div class="service">
+      <Card name="Starter Package" class="mb-3">
+        <br/>
         <p>Perfect for personal websites and blogs.</p>
         <p>Includes:</p>
         <ul>
@@ -52,9 +12,11 @@
           <li>Contact Form</li>
         </ul>
         <p>Starting at £300</p>
-      </div>
-      <div class="service">
-        <h2>Business Package</h2>
+      </Card>
+    </div>
+    <div class="service">
+      <Card name="Business Package">
+        <br/>
         <p>Ideal for small businesses.</p>
         <p>Includes:</p>
         <ul>
@@ -64,6 +26,17 @@
           <li>Basic SEO</li>
         </ul>
         <p>Starting at £700</p>
-      </div>
+      </Card>
     </div>
-  </template>
+  </div>
+</template>
+
+<script>
+import Card from "@/components/Card.vue";
+
+export default {
+  components: {
+    Card,
+  },
+};
+</script>
