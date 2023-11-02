@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-teal-600">
+  <nav class="navbar bg-teal-600 bg-opacity-10">
     <div class="logo">
       <span class="text-2xl md:text-3xl lg:text-4xl">Boyle Solutions</span>
     </div>
