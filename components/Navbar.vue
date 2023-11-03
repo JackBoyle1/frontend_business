@@ -4,7 +4,10 @@
       <span class="text-2xl md:text-3xl lg:text-4xl">Boyle Solutions</span>
     </div>
     <div class="md:hidden">
-      <button class="text-white p-2 focus:outline-none">
+      <button
+        @click="toggleMobileMenu"
+        class="text-white p-2 focus:outline-none"
+      >
         <svg
           fill="none"
           stroke="currentColor"
@@ -25,8 +28,31 @@
       <nuxt-link to="/about">About</nuxt-link>
       <nuxt-link to="/contact">Contact</nuxt-link>
     </div>
+    <div v-if="isMobileMenuOpen" class="mobile-menu">
+      <Modal :isMobileMenuOpen="isMobileMenuOpen" @close="isMobileMenuOpen = false"/>
+    </div>
   </nav>
 </template>
+
+<script>
+import Modal from '@/components/modals/Navbar.vue';
+
+export default {
+  data() {
+    return {
+      isMobileMenuOpen: false,
+    };
+  },
+  components: {
+    Modal,
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
+  }, 
+};
+</script>
 
 <style scoped>
 .navbar {
@@ -49,5 +75,17 @@
 
 .nav-links a:hover {
   color: gray;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
