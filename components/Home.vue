@@ -28,36 +28,38 @@
     </Transition>
 
     <Transition>
-      <section v-if="items[2]" class="cta text-white bg-gray-600 bg-opacity-30 rounded-full mb-5">
+      <Card v-if="items[2]" class="cta mb-5">
         <h2>Curious about the process?</h2>
         <p>Find out on our services page.</p>
         <Button @click="$router.push('/services')" class="mt-3" name="Services"></Button>
-      </section>
+      </Card>
     </Transition>
 
     <Transition>
-      <section v-if="items[2]" class="cta text-white bg-gray-600 bg-opacity-30 rounded-full">
+      <Card v-if="items[3]" class="cta">
         <h2>Ready to get started?</h2>
         <p>Contact us today for a free consultation.</p>
         <Button @click="$router.push('/contact')" class="mt-3" name="Contact Us"></Button>
-      </section>
+      </Card>
     </Transition>
   </div>
 </template>
 
 <script>
 import Button from "@/components/Button.vue";
-import ImageGallery from '~/components/ImageGallery.vue'
+import ImageGallery from '~/components/ImageGallery.vue';
+import Card from '@/components/Card.vue';
 
 export default {
   data() {
     return {
-      items: [false, false, false],
+      items: [false, false, false, false],
     };
   },
   components: {
     Button,
     ImageGallery,
+    Card,
   },
   mounted() {
     this.changeItemsOneByOne();
@@ -70,13 +72,17 @@ export default {
       this.items[1] = true;
     },
     items2() {
-      this.items[2] = true;
+      
+    },
+    items3() {
+      this.items[3] = true;
     },
     async changeItemsOneByOne() {
       const delay = 250;
       await this.delayedShow(0, delay);
       await this.delayedShow(1, delay);
       await this.delayedShow(2, delay);
+      await this.delayedShow(3, delay);
     },
     async delayedShow(index, delay) {
       await new Promise((resolve) => setTimeout(resolve, delay));
