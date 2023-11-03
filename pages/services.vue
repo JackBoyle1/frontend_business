@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Services />
-  </div>
+  <Services />
 </template>
 
 <script>

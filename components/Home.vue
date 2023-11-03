@@ -27,13 +27,19 @@
       </section>
     </Transition>
 
-    <ImageGallery/>
+    <Transition>
+      <section v-if="items[2]" class="cta text-white bg-gray-600 bg-opacity-30 rounded-full mb-5">
+        <h2>Curious about the process?</h2>
+        <p>Find out on our services page.</p>
+        <Button @click="$router.push('/services')" class="mt-3" name="Services"></Button>
+      </section>
+    </Transition>
 
     <Transition>
       <section v-if="items[2]" class="cta text-white bg-gray-600 bg-opacity-30 rounded-full">
         <h2>Ready to get started?</h2>
         <p>Contact us today for a free consultation.</p>
-        <Button @click="routeToContact" class="mt-3" name="Contact Us"></Button>
+        <Button @click="$router.push('/contact')" class="mt-3" name="Contact Us"></Button>
       </section>
     </Transition>
   </div>
@@ -57,9 +63,6 @@ export default {
     this.changeItemsOneByOne();
   },
   methods: {
-    routeToContact() {
-      this.$router.push('/contact');
-    },
     items0() {
       this.items[0] = true;
     },
