@@ -20,7 +20,6 @@
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      <!-- Mobile menu toggle button (e.g., a hamburger menu) -->
     </div>
     <div class="nav-links hidden md:flex md:space-x-4 lg:space-x-6">
       <nuxt-link to="/">Home</nuxt-link>

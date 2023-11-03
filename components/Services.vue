@@ -38,7 +38,6 @@
           <li>Custom Design</li>
           <li>Up to 30 Pages</li>
           <li>Contact Form</li>
-          <!-- <li>Basic SEO</li> -->
         </ul>
         <p>Starting at £1000</p>
       </Card>

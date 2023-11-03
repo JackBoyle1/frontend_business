@@ -2,7 +2,6 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    // "isCustomElement": (tag) => tag.startsWith("b-")
     "icCustomElement": true,
   }
 }

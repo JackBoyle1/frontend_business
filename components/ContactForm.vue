@@ -152,7 +152,7 @@ export default {
       this.items[7] = true;
     },
     async changeItemsOneByOne() {
-      const delay = 50; // 0.5 seconds in milliseconds
+      const delay = 50;
       await this.delayedShow(0, delay);
       await this.delayedShow(1, delay);
       await this.delayedShow(2, delay);

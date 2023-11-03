@@ -50,22 +50,9 @@ export default {
       this.items[1] = true;
     },
     async changeItemsOneByOne() {
-      const delay = 250; // 0.5 seconds in milliseconds
-      // let index = 0;
-      // setTimeout(this.items0(), delay);
-      // setTimeout(this.items1(), delay);
-      // setTimeout(this.items2(), delay);
+      const delay = 250;
       await this.delayedShow(0, delay);
       await this.delayedShow(1, delay);
-
-      // const changeItem = () => {
-      //   this.items[index] = false; // Change the value to false
-      //   index++;
-
-      //   if (index < this.items.length) {
-      //     setTimeout(changeItem, delay);
-      //   }
-      // };
     },
     async delayedShow(index, delay) {
       await new Promise((resolve) => setTimeout(resolve, delay));
