@@ -43,19 +43,13 @@ export default {
     this.changeItemsOneByOne();
   },
   methods: {
-    items0() {
-      this.items[0] = true;
-    },
-    items1() {
-      this.items[1] = true;
-    },
     async changeItemsOneByOne() {
-      const delay = 250;
-      await this.delayedShow(0, delay);
-      await this.delayedShow(1, delay);
+      for (let i = 0; i < this.items.length; i++) {
+        await this.delayedShow(i);
+      }
     },
-    async delayedShow(index, delay) {
-      await new Promise((resolve) => setTimeout(resolve, delay));
+    async delayedShow(index) {
+      await new Promise((resolve) => setTimeout(resolve, 250));
       this.items[index] = true;
     },
   },

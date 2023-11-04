@@ -11,8 +11,8 @@
 
     <Transition>
       <Card v-if="items[1]" name="Starter Package" class="mb-3">
+        <p>Perfect for personal websites and very small businesses.</p>
         <br />
-        <p>Perfect for personal websites and blogs.</p>
         <p>Includes:</p>
         <ul>
           <li>Responsive Design</li>
@@ -31,8 +31,8 @@
 
     <Transition>
       <Card v-if="items[2]" name="Business Package">
+        <p>Ideal for small-medium sized businesses.</p>
         <br />
-        <p>Ideal for small businesses.</p>
         <p>Includes:</p>
         <ul>
           <li>Custom Design</li>
@@ -57,8 +57,8 @@
           contact form.<br /> Each screenshot provides a glimpse of these pages.
         </p>
         <p><br />
-          If you're interested in a similar website for your business, it's
-          priced at just £400. This includes a starting fee of £300 and an
+          If you're interested in a similar website for your business, it falls under the Starter Package
+          priced at just £400.<br/> This includes a starting fee of £300 and an
           additional £100 for the contact form.
         </p>
         <ImageGallery class="mt-3" />
@@ -86,28 +86,13 @@ export default {
     this.changeItemsOneByOne();
   },
   methods: {
-    items0() {
-      this.items[0] = true;
-    },
-    items1() {
-      this.items[1] = true;
-    },
-    items2() {
-      this.items[2] = true;
-    },
-    items3() {
-      this.items[3] = true;
-    },
     async changeItemsOneByOne() {
-      const delay = 250;
-      await this.delayedShow(0, delay);
-      await this.delayedShow(1, delay);
-      await this.delayedShow(2, delay);
-      await this.delayedShow(3, delay);
-      console.log(this.items);
+      for (let i = 0; i < this.items.length; i++) {
+        await this.delayedShow(i);
+      }
     },
-    async delayedShow(index, delay) {
-      await new Promise((resolve) => setTimeout(resolve, delay));
+    async delayedShow(index) {
+      await new Promise((resolve) => setTimeout(resolve, 250));
       this.items[index] = true;
     },
   },

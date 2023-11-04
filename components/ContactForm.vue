@@ -99,7 +99,7 @@ export default {
         phoneNumber: "",
         message: "",
       },
-      items: [false, false, false, false, false, false, false, false],
+      items: Array(8).fill(false),
       isLoading: false,
     };
   },
@@ -127,43 +127,13 @@ export default {
       }
       this.isLoading = false;
     },
-    items0() {
-      this.items[0] = true;
-    },
-    items1() {
-      this.items[1] = true;
-    },
-    items2() {
-      this.items[2] = true;
-    },
-    items3() {
-      this.items[3] = true;
-    },
-    items4() {
-      this.items[4] = true;
-    },
-    items5() {
-      this.items[5] = true;
-    },
-    items6() {
-      this.items[6] = true;
-    },
-    items7() {
-      this.items[7] = true;
-    },
     async changeItemsOneByOne() {
-      const delay = 50;
-      await this.delayedShow(0, delay);
-      await this.delayedShow(1, delay);
-      await this.delayedShow(2, delay);
-      await this.delayedShow(3, delay);
-      await this.delayedShow(4, delay);
-      await this.delayedShow(5, delay);
-      await this.delayedShow(6, delay);
-      await this.delayedShow(7, delay);
+      for (let i = 0; i < this.items.length; i++) {
+        await this.delayedShow(i);
+      }
     },
-    async delayedShow(index, delay) {
-      await new Promise((resolve) => setTimeout(resolve, delay));
+    async delayedShow(index) {
+      await new Promise((resolve) => setTimeout(resolve, 50));
       this.items[index] = true;
     },
   },
