@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-teal-600 hover:bg-teal-800 transition ease-out duration-500 text-white font-semibold py-2 px-4 rounded">
+  <button :class="backgroundClass + ' transition ease-out duration-500 text-white font-semibold py-2 px-4 rounded'">
     <div v-if="isLoading" class="flex items-center">
       <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -14,6 +14,10 @@
 export default {
   props: {
     name: String,
+    backgroundClass: {
+      type: String,
+      default: 'bg-teal-600 hover:bg-teal-800'
+    },
     isLoading: {
       type: Boolean,
       default: false,

@@ -18,20 +18,20 @@
         </svg>
       </button>
       <ul>
-        <li><Button class="mb-5" @click="navigate('/')" name="Home" /></li>
+        <li><Button class="mb-5" backgroundClass="" @click="navigate('/')" name="Home" /></li>
         <li>
-          <Button class="mb-5" @click="navigate('/services')" name="Services" />
+          <Button class="mb-5" backgroundClass="" @click="navigate('/services')" name="Services" />
         </li>
         <li>
-          <Button class="mb-5" @click="navigate('/faq')" name="FAQ" />
+          <Button class="mb-5" backgroundClass="" @click="navigate('/faq')" name="FAQ" />
         </li>
         <li>
-          <Button class="mb-5" @click="navigate('/portfolio')" name="Portfolio" />
+          <Button class="mb-5" backgroundClass="" @click="navigate('/portfolio')" name="Portfolio" />
         </li>
         <li>
-          <Button class="mb-5" @click="navigate('/about')" name="About" />
+          <Button class="mb-5" backgroundClass="" @click="navigate('/about')" name="About" />
         </li>
-        <li><Button @click="navigate('/contact')" name="Contact" /></li>
+        <li><Button backgroundClass="" @click="navigate('/contact')" name="Contact" /></li>
       </ul>
     </div>
   </div>

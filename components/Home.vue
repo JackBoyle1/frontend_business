@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <Transition>
-      <img src="logo-cropped.png" class="mx-auto"/>
+      <img v-if="items[0]" src="logo-cropped.png" class="mx-auto"/>
     </Transition>
 
     <Transition>
