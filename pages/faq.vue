@@ -1,6 +1,11 @@
 <template>
     <Transition>
-        <Card v-if="items[0]" class="mb-5" name="Frequently Asked Questions"></Card>
+      <h1
+        v-if="items[0]"
+        class="sm:text-2x1 md:text-3xl lg:text-3x1 font-bold text-center pb-4 text-white"
+      >
+        Frequently Asked Questions
+      </h1>
     </Transition>
 
     <Transition>
@@ -101,17 +106,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  transform: translateX(200px);
-  opacity: 0;
-}
-</style>

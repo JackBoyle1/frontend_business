@@ -1,12 +1,12 @@
 <template>
-    <Transition>
-      <h1
-        v-if="items[0]"
-        class="sm:text-2x1 md:text-3xl lg:text-3x1 font-bold text-center pb-4 text-white"
-      >
-        Previous Work
-      </h1>
-    </Transition>
+  <Transition>
+    <h1
+      v-if="items[0]"
+      class="sm:text-2x1 md:text-3xl lg:text-3x1 font-bold text-center pb-4 text-white"
+    >
+      Previous Work
+    </h1>
+  </Transition>
 
   <Transition>
     <Card v-if="items[1]" class="mt-4" roundedSuffix="3xl">
@@ -19,7 +19,7 @@
       </p>
       <p>
         <br />
-        If you're interested in a similar website for your business, it falls
+        If you are interested in a similar website for your business, it falls
         under the Starter Package priced at just £400.<br />
         This includes a starting fee of £300 and an additional £100 for the
         contact form.
@@ -57,17 +57,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  transform: translateX(200px);
-  opacity: 0;
-}
-</style>

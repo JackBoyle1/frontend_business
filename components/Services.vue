@@ -106,17 +106,6 @@ export default {
 </script>
 
 <style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  transform: translateX(200px);
-  opacity: 0;
-}
 .landing {
   text-align: center;
   padding: 40px;
