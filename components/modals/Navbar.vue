@@ -23,6 +23,12 @@
           <Button class="mb-5" @click="navigate('/services')" name="Services" />
         </li>
         <li>
+          <Button class="mb-5" @click="navigate('/faq')" name="FAQ" />
+        </li>
+        <li>
+          <Button class="mb-5" @click="navigate('/portfolio')" name="Portfolio" />
+        </li>
+        <li>
           <Button class="mb-5" @click="navigate('/about')" name="About" />
         </li>
         <li><Button @click="navigate('/contact')" name="Contact" /></li>

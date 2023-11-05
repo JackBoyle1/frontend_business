@@ -24,6 +24,8 @@
     <div class="nav-links hidden md:flex md:space-x-4 lg:space-x-6">
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/services">Services</nuxt-link>
+      <nuxt-link to="/faq">FAQ</nuxt-link>
+      <nuxt-link to="/portfolio">Portfolio</nuxt-link>
       <nuxt-link to="/about">About</nuxt-link>
       <nuxt-link to="/contact">Contact</nuxt-link>
     </div>

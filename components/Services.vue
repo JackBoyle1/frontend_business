@@ -18,6 +18,7 @@
           <li>Responsive Design</li>
           <li>Up to 5 Pages</li>
           <li>Contact Form</li>
+          <li>1 Free Revision</li>
         </ul>
         <p>Starting at £300</p>
         <br />
@@ -25,6 +26,7 @@
         <ul>
           <li>Contact Form: +£100</li>
           <li>Custom Design: +£150 per page</li>
+          <li>Additional Revision: +£50</li>
         </ul>
       </Card>
     </Transition>
@@ -38,30 +40,34 @@
           <li>Custom Design</li>
           <li>Up to 30 Pages</li>
           <li>Contact Form</li>
+          <li>3 Free Revisions</li>
         </ul>
         <p>Starting at £1000</p>
+        <br />
+        <p>Extras:</p>
+        <ul>
+          <li>Additional Revision: +£50</li>
+        </ul>
       </Card>
     </Transition>
 
     <Transition>
       <Card
         v-if="items[3]"
-        name="Previous work"
+        name="What Do I need from you?"
         class="mt-4"
-        roundedSuffix="3xl"
       >
         <br />
-        <p>
-          Welcome to my web portfolio, showcasing my work! Explore a beautifully
-          designed landing page, an informative resume page, and a user-friendly
-          contact form.<br /> Each screenshot provides a glimpse of these pages.
-        </p>
-        <p><br />
-          If you're interested in a similar website for your business, it falls under the Starter Package
-          priced at just £400.<br/> This includes a starting fee of £300 and an
-          additional £100 for the contact form.
-        </p>
-        <ImageGallery class="mt-3" />
+        To design a website that suits you best, I'll need the following information:
+        <ul>
+          <li>What name you'd like for your site</li>
+          <li>Your preferred package option</li>
+          <li>Any additional extras you'd like to add</li>
+          <li>All the images you want to include on the site</li>
+          <li>Your preferred color scheme</li>
+          <li>The pages you'd like to have on your website</li>
+          <li>Your desired domain name</li>
+        </ul>
       </Card>
     </Transition>
   </div>
@@ -74,7 +80,7 @@ import ImageGallery from "@/components/ImageGallery.vue";
 export default {
   data() {
     return {
-      items: [false, false, false, false],
+      items: Array(4).fill(false),
     };
   },
   components: {
