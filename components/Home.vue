@@ -48,7 +48,6 @@
 <script>
 import Button from "@/components/Button.vue";
 import ImageGallery from '~/components/ImageGallery.vue';
-import Card from '@/components/Card.vue';
 import { globalMixin } from "@/assets/js/globalMixin.js";
 
 export default {
@@ -60,7 +59,6 @@ export default {
   components: {
     Button,
     ImageGallery,
-    Card,
   },
   mixins: [globalMixin],
 };

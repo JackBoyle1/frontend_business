@@ -74,7 +74,6 @@
 </template>
 
 <script>
-import Card from "@/components/Card.vue";
 import ImageGallery from "@/components/ImageGallery.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 
@@ -85,7 +84,6 @@ export default {
     };
   },
   components: {
-    Card,
     ImageGallery,
   },
   mixins: [globalMixin],

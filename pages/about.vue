@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import Card from "@/components/Card.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 
 export default {
@@ -38,9 +37,6 @@ export default {
     return {
       items: [false, false],
     };
-  },
-  components: {
-    Card,
   },
   mixins: [globalMixin],
 };
