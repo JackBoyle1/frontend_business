@@ -87,6 +87,7 @@
 <script>
 import axios from "axios";
 import Button from '@/components/Button.vue';
+import { globalMixin } from "@/assets/js/globalMixin.js";
 
 export default {
   data() {
@@ -106,9 +107,7 @@ export default {
   components: {
     Button,
   },
-  mounted() {
-    this.changeItemsOneByOne();
-  },
+  mixins: [globalMixin],
   methods: {
     async submitForm() {
       this.isLoading = true;
@@ -126,15 +125,6 @@ export default {
         console.error("Error submitting the form:", error);
       }
       this.isLoading = false;
-    },
-    async changeItemsOneByOne() {
-      for (let i = 0; i < this.items.length; i++) {
-        await this.delayedShow(i);
-      }
-    },
-    async delayedShow(index) {
-      await new Promise((resolve) => setTimeout(resolve, 50));
-      this.items[index] = true;
     },
   },
 };

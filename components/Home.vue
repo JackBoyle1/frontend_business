@@ -49,6 +49,7 @@
 import Button from "@/components/Button.vue";
 import ImageGallery from '~/components/ImageGallery.vue';
 import Card from '@/components/Card.vue';
+import { globalMixin } from "@/assets/js/globalMixin.js";
 
 export default {
   data() {
@@ -61,29 +62,11 @@ export default {
     ImageGallery,
     Card,
   },
-  mounted() {
-    this.changeItemsOneByOne();
-  },
-  methods: {
-    async changeItemsOneByOne() {
-      for (let i = 0; i < this.items.length; i++) {
-        await this.delayedShow(i);
-      }
-    },
-    async delayedShow(index) {
-      await new Promise((resolve) => setTimeout(resolve, 250));
-      this.items[index] = true;
-    },
-  },
+  mixins: [globalMixin],
 };
 </script>
 
 <style scoped>
-.landing {
-  text-align: center;
-  padding: 40px;
-}
-
 header {
   margin-top: 20px;
   font-size: 2rem;
@@ -102,14 +85,5 @@ header {
 .cta {
   padding: 40px;
   text-align: center;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.fade-in.active {
-  opacity: 1;
 }
 </style>

@@ -37,3 +37,8 @@
   transform: translateX(200px);
   opacity: 0;
 }
+
+.landing {
+  text-align: center;
+  padding: 40px;
+}
