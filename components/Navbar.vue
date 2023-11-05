@@ -1,8 +1,6 @@
 <template>
   <nav class="navbar bg-teal-600 bg-opacity-10">
-    <div class="logo">
-      <nuxt-link to="/"><span class="text-2xl md:text-3xl lg:text-4xl">Boyx</span></nuxt-link>
-    </div>
+    <nuxt-link to="/"><img src="logo-leaf.png" style="max-height: 32px;"/></nuxt-link>
     <div class="md:hidden">
       <button
         @click="toggleMobileMenu"
@@ -63,11 +61,6 @@ export default {
   align-items: center;
   padding: 10px 20px;
 }
-
-.logo span {
-  font-size: 1.5rem;
-}
-
 .nav-links a {
   color: #fff;
   text-decoration: none;

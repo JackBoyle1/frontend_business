@@ -1,10 +1,7 @@
 <template>
   <div class="landing">
     <Transition>
-      <header v-if="items[0]" class="text-white">
-        <h1>Welcome to Boyx</h1>
-        <p>Your Partner in Web Development</p>
-      </header>
+      <img src="logo-cropped.png" class="mx-auto"/>
     </Transition>
 
     <Transition>
