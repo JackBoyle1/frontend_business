@@ -19,6 +19,27 @@ export default {
     Navbar,
   },
   mixins: [globalMixin],
+  setup() {
+    const route = useRoute();
+    useHead({
+      titleTemplate: (titleChunk) => {
+        switch (route.path) {
+          case "/":
+            return `${titleChunk} Welcome` || "Welcome";
+          case "/services":
+            return `${titleChunk} Services` || "Services";
+          case "/faq":
+            return `${titleChunk} FAQ` || "FAQ";
+          case "/portfolio":
+            return `${titleChunk} Portfolio` || "Portfolio";
+          case "/about":
+            return `${titleChunk} About` || "About";
+          case "/contact":
+            return `${titleChunk} Contact` || "Contact";
+        }
+      },
+    });
+  },
 };
 </script>
 
