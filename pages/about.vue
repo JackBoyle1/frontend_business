@@ -3,7 +3,8 @@
     <h1
       v-if="items[0]"
       class="sm:text-2x1 md:text-3xl lg:text-3x1 font-bold text-center pb-4 text-white"
-    >About Us
+    >
+      About Us
     </h1>
   </Transition>
 
@@ -18,8 +19,8 @@
         beautifully designed, responsive, and user-friendly websites.
       </p>
       <p class="text-base mb-2">
-        With a team of experienced developers, we are dedicated to delivering
-        web solutions tailored to your unique needs.
+        We are dedicated to delivering web solutions tailored to your unique
+        needs.
       </p>
       <p class="text-base">
         Let's work together to turn your web ideas into reality.

@@ -6,9 +6,13 @@
     <Transition>
         <Card v-if="items[1]" class="mb-5">
             <section>
-                <div><span class="font-bold">How long will a website take to develop?</span></div>
-                <div>This varies on the package, on the various needs of the customer, and our availability.</div>
-                <div>Typically, you can expect it to take up to 1 month for the Starter Package and 1-3 months for the Business Package.</div>
+                <div><span class="font-bold">How long does it take to build a website?</span></div>
+                <div>The timeline for website development can vary based on the package you choose, your specific requirements, and our current availability.</div>
+                <div>Generally, you can anticipate the following timeframes:</div>
+                <ul>
+                    <li>Starter Package: About 1 month</li>
+                    <li>Business Package: Approximately 1 to 3 months</li>
+                </ul>
             </section>
         </Card>
     </Transition>
@@ -16,8 +20,8 @@
     <Transition>
         <Card v-if="items[2]" class="mb-5">
             <section>
-                <div><span class="font-bold">Can I request changes as it's being built?</span></div>
-                <div>Yes and, as long as it's not an extra, the change will be free of charge too!</div>
+                <div><span class="font-bold">Can I ask for changes while the website is being created?</span></div>
+                <div>Absolutely! And the best part is, if it's not an additional feature, making changes won't cost you anything extra!</div>
             </section>
         </Card>
     </Transition>
@@ -25,9 +29,9 @@
     <Transition>
         <Card v-if="items[3]" class="mb-5">
             <section>
-                <div><span class="font-bold">Can I cancellation during the project?</span></div>
-                <div>Yes, but you won't be entitled to a refund. Despite that, we'd estimate how much of the project was left to do and at our discretion</div>
-                <div> we'd refund you the leftover percentage cost of the project. We'd also transfer to you the files for the uncompleted project.</div>
+                <div><span class="font-bold">Can I cancel my project mid-way?</span></div>
+                <div>Yes, you can cancel, but unfortunately, we can't provide a full refund. However, we'll assess how much of the project remains and, at our discretion,</div>
+                <div>refund you the remaining portion of the cost. We'll also hand over the files for the unfinished work.</div>
             </section>
         </Card>
     </Transition>
@@ -35,9 +39,12 @@
     <Transition>
         <Card v-if="items[4]" class="mb-5">
             <section>
-                <div><span class="font-bold">How long will a website take to develop?</span></div>
-                <div>This varies on the package, on the various needs of the customer, and our availability.</div>
-                <div>Typically, you can expect it to take up to 1 month for the Starter Package and 1-3 months for the Business Package.</div>
+                <div><span class="font-bold">Will there be any extra costs?</span></div>
+                <div>Here are a couple of things to consider:</div>
+                <ul>
+                    <li>Domain Name: You'll need to choose a web address (domain name) for your site. We can offer recommendations and provide the prices for your options.</li>
+                    <li>Hosting: Hosting fees can vary based on the size and complexity of your project. In some cases, hosting for small websites might even be free! You can either select your own hosting provider or let us make a choice for you – it's your call!</li>
+                </ul>
             </section>
         </Card>
     </Transition>
@@ -45,10 +52,9 @@
     <Transition>
         <Card v-if="items[5]" class="mb-5">
             <section>
-                <div><span class="font-bold">Are there any additional charges?</span></div>
-                <div>You will need to pick a domain name for your website. We will be able to give you some recommendations, as well as the price of each of them.</div>
-                <div>You will also need to get your website hosted. Hosting fees are dependent on the size of the project and can vary. For small websites they can sometimes be free!.</div>
-                <div>You can choose your hosting provider yourself or you can elect for us to choose one for you. The decision is yours!</div>
+                <div><span class="font-bold">What is a domain name?</span></div>
+                <div>A domain name is the name of your website, like "boyx.co.uk." Domain names can vary in price for various reasons. If your website is primarily for the UK,</div>
+                <div>we suggest using a domain name that ends with ".co.uk."</div>
             </section>
         </Card>
     </Transition>
@@ -56,9 +62,8 @@
     <Transition>
         <Card v-if="items[6]" class="mb-5">
             <section>
-                <div><span class="font-bold">What is a domain name?</span></div>
-                <div>The domain name is the name of your website. For example for this website the domain name is boylesolutions.com. For a variety of reasons, </div>
-                <div>different domain names come at different costs. If your website is UK specific we recommend you use a domain name that ends in .co.uk</div>
+                <div><span class="font-bold">What is hosting?</span></div>
+                <div>When you want to access a website, it needs to be stored on a server that's always online. This server, in a way, "hosts" your website. Many different companies provide and maintain these hosting servers.</div>
             </section>
         </Card>
     </Transition>
@@ -66,17 +71,8 @@
     <Transition>
         <Card v-if="items[7]" class="mb-5">
             <section>
-                <div><span class="font-bold">What is hosting?</span></div>
-                <div>In order to visit a website, a server must be running that website. In that instance, a server is "hosting" your website. There are a variety of providers that run these hosting servers</div>
-            </section>
-        </Card>
-    </Transition>
-
-    <Transition>
-        <Card v-if="items[8]" class="mb-5">
-            <section>
-                <div><span class="font-bold">Who has ownership of the website when it's completed?</span></div>
-                <div>You do. I'll keep the code in a remote repository and host the website for you but, if you want, I can transfer the code to you instead/as well.</div>
+                <div><span class="font-bold">Who owns the website once it's finished?</span></div>
+                <div>The website is all yours! I'll store the code in a remote repository and can also host the website for you, but if you prefer, I can transfer the code to you completely or in addition.</div>
             </section>
         </Card>
     </Transition>
@@ -86,7 +82,7 @@
 export default {
     data() {
         return {
-            items: Array(9).fill(false)
+            items: Array(8).fill(false)
         }
     },
     mounted() {

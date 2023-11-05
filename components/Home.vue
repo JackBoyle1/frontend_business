@@ -2,7 +2,7 @@
   <div class="landing">
     <Transition>
       <header v-if="items[0]" class="text-white">
-        <h1>Welcome to Boyle Solutions</h1>
+        <h1>Welcome to Boyx</h1>
         <p>Your Partner in Web Development</p>
       </header>
     </Transition>
@@ -11,7 +11,7 @@
       <section v-if="items[1]" class="features text-white">
         <div class="feature">
           <h2>Custom Web Development</h2>
-          <p>We build tailored solutions to meet your unique business needs.</p>
+          <p>We build tailored solutions to meet your unique personal or business needs.</p>
         </div>
         <div class="feature">
           <h2>Expert Consulting</h2>

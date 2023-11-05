@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar bg-teal-600 bg-opacity-10">
     <div class="logo">
-      <span class="text-2xl md:text-3xl lg:text-4xl">Boyle Solutions</span>
+      <span class="text-2xl md:text-3xl lg:text-4xl">Boyx</span>
     </div>
     <div class="md:hidden">
       <button
