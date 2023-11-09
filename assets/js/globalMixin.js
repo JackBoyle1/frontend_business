@@ -4,7 +4,7 @@ export const globalMixin = {
     },
     methods: {
       async changeItemsOneByOne() {
-        for (let i = 0; i < this.items.length; i++) {
+        for (let i = 0; i < this.items?.length; i++) {
           await this.delayedShow(i);
         }
       },
