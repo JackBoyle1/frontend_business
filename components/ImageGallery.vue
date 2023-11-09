@@ -1,5 +1,5 @@
 <template>
-  <div class="relative max-w-screen-xl mx-auto">
+  <div v-if="!isMobileMenuOpen" class="relative max-w-screen-xl mx-auto">
     <button
       v-if="currentIndex != 0"
       @click="showPreviousImage"
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { useStore } from "~/store/store";
+
 export default {
   data() {
     return {
@@ -38,6 +40,9 @@ export default {
   computed: {
     currentImage() {
       return this.images[this.currentIndex];
+    },
+    isMobileMenuOpen() {
+      return useStore().isMobileMenuOpen;
     },
   },
   methods: {

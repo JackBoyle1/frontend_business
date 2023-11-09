@@ -3,7 +3,7 @@
     <nuxt-link to="/"><img src="logo-leaf.png" style="max-height: 32px;"/></nuxt-link>
     <div class="md:hidden">
       <button
-        @click="toggleMobileMenu"
+        @click="toggleIsMobileMenuOpen"
         class="text-white p-2 focus:outline-none"
       >
         <svg
@@ -28,27 +28,31 @@
       <nuxt-link to="/contact">Contact</nuxt-link>
     </div>
     <div v-if="isMobileMenuOpen" class="mobile-menu">
-      <Modal :isMobileMenuOpen="isMobileMenuOpen" @close="isMobileMenuOpen = false"/>
+      <Modal :isMobileMenuOpen="isMobileMenuOpen" @close="closeMobileMenu"/>
     </div>
   </nav>
 </template>
 
 <script>
 import Modal from '@/components/modals/Navbar.vue';
+import { useStore } from "@/store/store";
 
 export default {
-  data() {
-    return {
-      isMobileMenuOpen: false,
-    };
-  },
   components: {
     Modal,
   },
-  methods: {
-    toggleMobileMenu() {
-      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  computed: {
+    isMobileMenuOpen() {
+      return useStore().isMobileMenuOpen;
     },
+  },
+  methods: {
+    toggleIsMobileMenuOpen() {
+      useStore().toggleIsMobileMenuOpen();
+    },
+    closeMobileMenu() {
+      useStore().closeMobileMenu();
+    }
   }, 
 };
 </script>
