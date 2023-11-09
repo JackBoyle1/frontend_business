@@ -54,14 +54,23 @@
     <Transition>
       <div v-if="items[4]" class="mb-4">
         <label for="countryCode" class="block font-semibold text-white"
-          >Country Code:</label
+          >Country:</label
         >
-        <input
+        <select
           id="countryCode"
           v-model="form.countryCode"
+          :options="options"
           class="w-full px-3 py-2 border rounded"
           required
-        />
+        >
+          <option
+            v-for="option in options"
+            :key="option.value"
+            :value="option.value"
+          >
+            {{ option.label }}
+          </option>
+        </select>
       </div>
     </Transition>
 
@@ -105,6 +114,7 @@
 import axios from "axios";
 import Button from "@/components/Button.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
+import countryCodes from "@/assets/json/countryCodes.json"
 
 export default {
   data() {
@@ -113,11 +123,12 @@ export default {
         name: "",
         email: "",
         company: "",
-        countryCode: "",
+        countryCode: "+44",
         phoneNumber: "",
         message: "",
         test: "",
       },
+      options: countryCodes,
       items: Array(8).fill(false),
       isLoading: false,
     };
