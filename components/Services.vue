@@ -67,6 +67,7 @@
           <li>Your preferred color scheme</li>
           <li>The pages you'd like to have on your website</li>
           <li>Your desired domain name</li>
+          <li>If you've opted for a contact form: receive and send email addresses</li>
         </ul>
       </Card>
     </Transition>
