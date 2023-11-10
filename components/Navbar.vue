@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar bg-teal-600 bg-opacity-10">
-    <nuxt-link to="/"><img src="logo-leaf.png" style="max-height: 32px;"/></nuxt-link>
+    <nuxt-link to="/"><img src="@/assets/images/logo-leaf.png" style="max-height: 32px;"/></nuxt-link>
     <div class="md:hidden">
       <button
         @click="toggleIsMobileMenuOpen"
