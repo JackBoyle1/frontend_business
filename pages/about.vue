@@ -9,7 +9,7 @@
   </Transition>
 
   <Transition>
-    <Card v-if="items[1]" name="" class="mb-3">
+    <Card v-if="items[1]" name="" class="mb-3" roundedSuffix="3xl">
       <p class="text-base mb-2">
         Welcome to our web development consultancy! We specialize in creating
         personalized websites for individuals and small businesses.

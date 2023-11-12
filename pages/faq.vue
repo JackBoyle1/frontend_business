@@ -22,8 +22,8 @@
         </div>
         <div>Generally, you can anticipate the following timeframes:</div>
         <ul>
-          <li>Starter Package: About 1 month</li>
-          <li>Business Package: Approximately 1 to 3 months</li>
+          <li><strong>Starter Package:</strong> About 1 month</li>
+          <li><strong>Business Package:</strong> Approximately 1 to 3 months</li>
         </ul>
       </section>
     </Card>

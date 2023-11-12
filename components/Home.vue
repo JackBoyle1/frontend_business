@@ -82,3 +82,23 @@ header {
   text-align: center;
 }
 </style>
+
+<style scoped>
+/* Media queries for small screens */
+
+@media only screen and (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    max-width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+}
+</style>

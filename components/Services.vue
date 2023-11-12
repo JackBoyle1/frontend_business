@@ -52,22 +52,38 @@
     </Transition>
 
     <Transition>
-      <Card
-        v-if="items[3]"
-        name="What Do I need from you?"
-        class="mt-4"
-      >
+      <Card v-if="items[3]" name="What Do I Need from You?" class="mt-4">
         <br />
-        To design a website that suits you best, I'll need the following information:
+        <p>
+          To design a website that suits you best, I'll need the following
+          information:
+        </p>
         <ul>
-          <li>What name you'd like for your site</li>
-          <li>Your preferred package option</li>
-          <li>Any additional extras you'd like to add</li>
-          <li>All the images you want to include on the site</li>
-          <li>Your preferred color scheme</li>
-          <li>The pages you'd like to have on your website</li>
-          <li>Your desired domain name</li>
-          <li>If you've opted for a contact form: receive and send email addresses</li>
+          <li>
+            <strong>1. Site Name:</strong> What name you'd like for your site
+          </li>
+          <li>
+            <strong>2. Package Option:</strong> Your preferred package option
+          </li>
+          <li><strong>3. Pages:</strong> What pages you want</li>
+          <li><strong>4. Content:</strong> What you'd like on each page</li>
+          <li>
+            <strong>5. Extras:</strong> Any additional extras you'd like to add
+          </li>
+          <li>
+            <strong>6. Images:</strong> All the images you want to include on
+            the site
+          </li>
+          <li><strong>7. Color Scheme:</strong> Your preferred color scheme</li>
+          <li>
+            <strong>8. Desired Pages:</strong> The pages you'd like to have on
+            your website
+          </li>
+          <li><strong>9. Domain Name:</strong> Your desired domain name</li>
+          <li>
+            <strong>10. Contact Form:</strong> If you've opted for a contact
+            form, provide details about receiving and sending email addresses
+          </li>
         </ul>
       </Card>
     </Transition>
