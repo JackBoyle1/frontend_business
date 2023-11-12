@@ -114,7 +114,7 @@
 import axios from "axios";
 import Button from "@/components/Button.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
-import countryCodes from "@/assets/json/countryCodes.json"
+import countryCodes from "@/assets/json/countryCodes.json";
 
 export default {
   data() {
@@ -126,7 +126,6 @@ export default {
         countryCode: "+44",
         phoneNumber: "",
         message: "",
-        test: "",
       },
       options: countryCodes,
       items: Array(8).fill(false),
@@ -139,20 +138,16 @@ export default {
   mixins: [globalMixin],
   methods: {
     handleSubmit: async function () {
-      const formData = new FormData();
-
-      for (let [key, value] of Object.entries(this.form)) {
-        formData.append(key, value);
-      }
-
-      await axios
-        .post("/api/submit", formData)
-        .then(({ data }) => {
-          console.log(data);
-        })
-        .catch((e) => {
-          console.log(e);
+      try {
+        const { response } = await $fetch("/api/submit", {
+          method: "post",
+          body: JSON.stringify(this.form),
         });
+
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };
