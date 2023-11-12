@@ -84,8 +84,6 @@ header {
 </style>
 
 <style scoped>
-/* Media queries for small screens */
-
 @media only screen and (max-width: 600px) {
   .features {
     flex-direction: column;
