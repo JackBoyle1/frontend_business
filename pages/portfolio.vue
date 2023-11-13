@@ -20,8 +20,8 @@
       <p>
         <br />
         If you are interested in a similar website for your business, it falls
-        under the Starter Package priced at just £400.<br />
-        This includes a starting fee of £300 and an additional £100 for the
+        under the Starter Package priced at just £700.<br />
+        This includes a starting fee of £500 and an additional £200 for the
         contact form.
       </p>
       <ImageGallery class="mt-3" />
