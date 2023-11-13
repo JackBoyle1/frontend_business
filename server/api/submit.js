@@ -15,16 +15,16 @@ export default defineEventHandler(async (event) => {
             </div>`;
 
   AWS.config.update({
-    NUXT_ENV_REGION: process.env.REGION,
-    NUXT_ENV_ACCESS_KEY_ID: process.env.ACCESS_KEY_ID,
-    NUXT_ENV_SECRET_KEY_ID: process.env.SECRET_KEY_ID,
+    region: 'eu-north-1',
+    accessKeyId: 'AKIASLVDMQMBOCHEV25F',
+    secretAccessKey: '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',
   });
 
   // Create sendEmail params
   var params = {
     Destination: {
       CcAddresses: [],
-      ToAddresses: [process.env.NUXT_ENV_TO_EMAIL_ADDRESS],
+      ToAddresses: ["jackboyle35@gmail.com"],
     },
     Message: {
       Body: {
@@ -42,7 +42,7 @@ export default defineEventHandler(async (event) => {
         Data: "Someone has contact you on Boyx",
       },
     },
-    Source: process.env.NUXT_ENV_FROM_EMAIL_ADDRESS,
+    Source: "admin@boyx.co.uk",
     ReplyToAddresses: [],
   };
 
