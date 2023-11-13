@@ -111,6 +111,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Button from "@/components/Button.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 import countryCodes from "@/assets/json/countryCodes.json";
@@ -138,7 +139,7 @@ export default {
   methods: {
     handleSubmit: async function () {
       try {
-        await $fetch("/api/submit", {
+        await axios.post("/.netlify/functions/ses-send-email", {
         method: "post",
         body: {
           name: this.form.name,
