@@ -25,7 +25,7 @@ export default {
       titleTemplate: (titleChunk) => {
         switch (route.path) {
           case "/":
-            return `${titleChunk} Welcome` || "Welcome";
+            return `${titleChunk} Your Partner in Web Development` || "Your Partner in Web Development";
           case "/services":
             return `${titleChunk} Services` || "Services";
           case "/faq":
@@ -36,6 +36,8 @@ export default {
             return `${titleChunk} About` || "About";
           case "/contact":
             return `${titleChunk} Contact` || "Contact";
+          case "/thankyou":
+            return `${titleChunk} Contact | Thank You` || "Contact | Thank You";
         }
       },
     });
