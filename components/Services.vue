@@ -20,13 +20,13 @@
           <li>Contact Form</li>
           <li>1 Free Revision</li>
         </ul>
-        <p>Starting at £300</p>
+        <p>Starting at £500</p>
         <br />
         <p>Extras:</p>
         <ul>
-          <li>Contact Form: +£100</li>
+          <li>Contact Form: +£200</li>
           <li>Custom Design: +£150 per page</li>
-          <li>Additional Revision: +£50</li>
+          <li>Additional Revision: +£100</li>
         </ul>
       </Card>
     </Transition>
@@ -42,48 +42,11 @@
           <li>Contact Form</li>
           <li>3 Free Revisions</li>
         </ul>
-        <p>Starting at £1000</p>
+        <p>Starting at £1200</p>
         <br />
         <p>Extras:</p>
         <ul>
-          <li>Additional Revision: +£50</li>
-        </ul>
-      </Card>
-    </Transition>
-
-    <Transition>
-      <Card v-if="items[3]" name="What Do I Need from You?" class="mt-4">
-        <br />
-        <p>
-          To design a website that suits you best, I'll need the following
-          information:
-        </p>
-        <ul>
-          <li>
-            <strong>1. Site Name:</strong> What name you'd like for your site
-          </li>
-          <li>
-            <strong>2. Package Option:</strong> Your preferred package option
-          </li>
-          <li><strong>3. Pages:</strong> What pages you want</li>
-          <li><strong>4. Content:</strong> What you'd like on each page</li>
-          <li>
-            <strong>5. Extras:</strong> Any additional extras you'd like to add
-          </li>
-          <li>
-            <strong>6. Images:</strong> All the images you want to include on
-            the site
-          </li>
-          <li><strong>7. Color Scheme:</strong> Your preferred color scheme</li>
-          <li>
-            <strong>8. Desired Pages:</strong> The pages you'd like to have on
-            your website
-          </li>
-          <li><strong>9. Domain Name:</strong> Your desired domain name</li>
-          <li>
-            <strong>10. Contact Form:</strong> If you've opted for a contact
-            form, provide details about receiving and sending email addresses
-          </li>
+          <li>Additional Revision: +£100</li>
         </ul>
       </Card>
     </Transition>
@@ -97,7 +60,7 @@ import { globalMixin } from "@/assets/js/globalMixin.js";
 export default {
   data() {
     return {
-      items: Array(4).fill(false),
+      items: Array(3).fill(false),
     };
   },
   components: {
