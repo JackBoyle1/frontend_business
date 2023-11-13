@@ -140,15 +140,12 @@ export default {
     handleSubmit: async function () {
       try {
         await axios.post("/.netlify/functions/ses-send-email", {
-        method: "post",
-        body: {
           name: this.form.name,
           email: this.form.email,
           company: this.form.company,
           countryCode: this.form.countryCode,
           phoneNumber: this.form.phoneNumber,
           message: this.form.message,
-        },
       });
       this.$router.push('/thankyou');
       } catch (error) {
