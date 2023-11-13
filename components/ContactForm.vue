@@ -149,7 +149,7 @@ export default {
           message: this.form.message,
         },
       });
-      console.log(process.env.TO_EMAIL_ADDRESS)
+      console.log(process.env.NUXT_ENV_TO_EMAIL_ADDRESS)
       this.$router.push('/thankyou');
       } catch (error) {
         console.error('Form submission error:', error);
