@@ -145,7 +145,7 @@ export default {
           email: this.form.email,
           company: this.form.company,
           countryCode: this.form.countryCode,
-          phoneNumber: this.phoneNumber,
+          phoneNumber: this.form.phoneNumber,
           message: this.form.message,
         },
       });
