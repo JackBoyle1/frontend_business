@@ -111,7 +111,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import Button from "@/components/Button.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 import countryCodes from "@/assets/json/countryCodes.json";
@@ -138,7 +137,8 @@ export default {
   mixins: [globalMixin],
   methods: {
     handleSubmit: async function () {
-      const { body } = await $fetch("/api/submit", {
+      try {
+        await $fetch("/api/submit", {
         method: "post",
         body: {
           name: this.form.name,
@@ -149,7 +149,10 @@ export default {
           message: this.form.message,
         },
       });
-      console.log(body);
+      this.$router.push('/thankyou');
+      } catch (error) {
+        console.error('Form submission error:', error);
+      }
     },
   },
 };
