@@ -149,6 +149,7 @@ export default {
           message: this.form.message,
         },
       });
+      console.log(process.env.TO_EMAIL_ADDRESS)
       this.$router.push('/thankyou');
       } catch (error) {
         console.error('Form submission error:', error);
