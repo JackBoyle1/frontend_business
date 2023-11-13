@@ -36,7 +36,7 @@
       redirectToContact() {
         setTimeout(() => {
           this.$router.push("/contact");
-        }, 5000);
+        }, 3000);
       },
     },
   };
