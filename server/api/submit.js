@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
+    const body = await readBody(event);
 AWS.config.update({region: 'eu-north-1', accessKeyId: process.env.ACCESS_KEY_ID, secretAccessKey: process.env.SECRET_KEY_ID});
 
 // Create sendEmail params 
@@ -12,7 +13,7 @@ var params = {
     Body: {
       Html: {
        Charset: "UTF-8",
-       Data: "HTML_FORMAT_BODY"
+       Data: `HTML_FORMAT_BODY ${body.name}`
       },
       Text: {
        Charset: "UTF-8",
@@ -31,6 +32,7 @@ var params = {
 // Create the promise and SES service object
 var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
+// return {params}
 // Handle promise's fulfilled/rejected states
 sendPromise.then(
   function(data) {
@@ -40,3 +42,5 @@ sendPromise.then(
     console.error(err, err.stack);
   })
 });
+
+return {body}

@@ -138,16 +138,18 @@ export default {
   mixins: [globalMixin],
   methods: {
     handleSubmit: async function () {
-      try {
-        const { response } = await $fetch("/api/submit", {
-          method: "post",
-          body: JSON.stringify(this.form),
-        });
-
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
+      const { body } = await $fetch("/api/submit", {
+        method: "post",
+        body: {
+          name: this.form.name,
+          email: this.form.email,
+          company: this.form.company,
+          countryCode: this.form.countryCode,
+          phoneNumber: this.phoneNumber,
+          message: this.form.message,
+        },
+      });
+      console.log(body);
     },
   },
 };
