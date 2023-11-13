@@ -67,5 +67,8 @@ export default {
     ImageGallery,
   },
   mixins: [globalMixin],
+  mounted() {
+    this.changeItemsOneByOne();
+  },
 };
 </script>

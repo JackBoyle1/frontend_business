@@ -39,5 +39,8 @@ export default {
     };
   },
   mixins: [globalMixin],
+  mounted() {
+    this.changeItemsOneByOne();
+  },
 };
 </script>

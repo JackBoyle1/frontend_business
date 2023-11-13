@@ -1,14 +1,21 @@
 <template>
   <div class="landing">
     <Transition>
-      <img v-if="items[0]" src="@/assets/images/logo-cropped.png" class="mx-auto"/>
+      <img
+        v-if="items[0]"
+        src="@/assets/images/logo-cropped.png"
+        class="mx-auto"
+      />
     </Transition>
 
     <Transition>
       <section v-if="items[1]" class="features text-white">
         <div class="feature">
           <h2>Custom Web Development</h2>
-          <p>We build tailored solutions to meet your unique personal or business needs.</p>
+          <p>
+            We build tailored solutions to meet your unique personal or business
+            needs.
+          </p>
         </div>
         <div class="feature">
           <h2>Expert Consulting</h2>
@@ -28,7 +35,11 @@
       <Card v-if="items[2]" class="cta mb-5">
         <h2>Curious about the process?</h2>
         <p>Find out on our services page.</p>
-        <Button @click="$router.push('/services')" class="mt-3" name="Services"></Button>
+        <Button
+          @click="$router.push('/services')"
+          class="mt-3"
+          name="Services"
+        ></Button>
       </Card>
     </Transition>
 
@@ -36,7 +47,11 @@
       <Card v-if="items[3]" class="cta">
         <h2>Ready to get started?</h2>
         <p>Contact us today for a free consultation.</p>
-        <Button @click="$router.push('/contact')" class="mt-3" name="Contact Us"></Button>
+        <Button
+          @click="$router.push('/contact')"
+          class="mt-3"
+          name="Contact Us"
+        ></Button>
       </Card>
     </Transition>
   </div>
@@ -44,7 +59,7 @@
 
 <script>
 import Button from "@/components/Button.vue";
-import ImageGallery from '~/components/ImageGallery.vue';
+import ImageGallery from "~/components/ImageGallery.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 
 export default {
@@ -58,6 +73,9 @@ export default {
     ImageGallery,
   },
   mixins: [globalMixin],
+  mounted() {
+    this.changeItemsOneByOne();
+  },
 };
 </script>
 

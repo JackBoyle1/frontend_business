@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 import Button from "@/components/Button.vue";
 import { globalMixin } from "@/assets/js/globalMixin.js";
 import countryCodes from "@/assets/json/countryCodes.json";
@@ -136,6 +136,9 @@ export default {
     Button,
   },
   mixins: [globalMixin],
+  mounted() {
+    this.changeItemsOneByOne(100);
+  },
   methods: {
     handleSubmit: async function () {
       try {
@@ -146,10 +149,10 @@ export default {
           countryCode: this.form.countryCode,
           phoneNumber: this.form.phoneNumber,
           message: this.form.message,
-      });
-      this.$router.push('/thankyou');
+        });
+        this.$router.push("/thankyou");
       } catch (error) {
-        console.error('Form submission error:', error);
+        console.error("Form submission error:", error);
       }
     },
   },

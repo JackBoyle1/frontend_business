@@ -23,7 +23,9 @@
         <div>Generally, you can anticipate the following timeframes:</div>
         <ul>
           <li><strong>Starter Package:</strong> About 1 month</li>
-          <li><strong>Business Package:</strong> Approximately 1 to 3 months</li>
+          <li>
+            <strong>Business Package:</strong> Approximately 1 to 3 months
+          </li>
         </ul>
       </section>
     </Card>
@@ -141,5 +143,8 @@ export default {
     };
   },
   mixins: [globalMixin],
+  mounted() {
+    this.changeItemsOneByOne();
+  },
 };
 </script>
