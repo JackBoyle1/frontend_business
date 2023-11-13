@@ -1,6 +1,3 @@
-[build]
-  command = "npm run generate"
-
 [context.production.environment]
 NUXT_ENV_ACCESS_KEY_ID="AKIASLVDMQMBOCHEV25F"
 NUXT_ENV_SECRET_KEY_ID="5705hRFiP/hSAXaR1yAptjPQ0v/xBdAlVTca6t2g"
