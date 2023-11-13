@@ -15,19 +15,16 @@ export default defineEventHandler(async (event) => {
             </div>`;
 
   AWS.config.update({
-    // region: process.env.REGION,
-    // accessKeyId: process.env.ACCESS_KEY_ID,
-    // secretAccessKey: process.env.SECRET_KEY_ID,
-    region: 'eu-north-1',
-    accessKeyId: 'AKIASLVDMQMBOCHEV25F',
-    secretAccessKey: '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',
+    region: process.env.REGION,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_KEY_ID,
   });
 
   // Create sendEmail params
   var params = {
     Destination: {
       CcAddresses: [],
-      ToAddresses: ["jackboyle35@gmail.com"],
+      ToAddresses: [process.env.TO_EMAIL_ADDRESS],
     },
     Message: {
       Body: {
@@ -45,7 +42,7 @@ export default defineEventHandler(async (event) => {
         Data: "Someone has contact you on Boyx",
       },
     },
-    Source: "admin@boyx.co.uk",
+    Source: process.env.FROM_EMAIL_ADDRESS,
     ReplyToAddresses: [],
   };
 
