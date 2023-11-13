@@ -15,9 +15,12 @@ export default defineEventHandler(async (event) => {
             </div>`;
 
   AWS.config.update({
-    region: process.env.REGION,
-    accessKeyId: process.env.ACCESS_KEY_ID,
-    secretAccessKey: process.env.SECRET_KEY_ID,
+    // region: process.env.REGION,
+    // accessKeyId: process.env.ACCESS_KEY_ID,
+    // secretAccessKey: process.env.SECRET_KEY_ID,
+    region: 'eu-north-1',
+    accessKeyId: 'AKIASLVDMQMBOCHEV25F',
+    secretAccessKey: '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',
   });
 
   // Create sendEmail params
