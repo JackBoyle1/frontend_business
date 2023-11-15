@@ -140,8 +140,12 @@ export default {
     this.changeItemsOneByOne(100);
   },
   methods: {
+    toggleIsLoading() {
+      this.isLoading = !this.isLoading
+    },
     handleSubmit: async function () {
       try {
+        this.toggleIsLoading();
         await axios.post("/.netlify/functions/ses-send-email", {
           name: this.form.name,
           email: this.form.email,
@@ -152,6 +156,7 @@ export default {
         });
         this.$router.push("/thankyou");
       } catch (error) {
+        this.toggleIsLoading();
         console.error("Form submission error:", error);
       }
     },
