@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "nuxt-simple-sitemap",
+    "nuxt-og-image",
     [
       "@nuxtjs/robots",
       {
