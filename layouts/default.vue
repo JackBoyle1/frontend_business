@@ -22,10 +22,16 @@ export default {
   setup() {
     const route = useRoute();
     useHead({
+      htmlAttrs: {
+        lang: "en",
+      },
       titleTemplate: (titleChunk) => {
         switch (route.path) {
           case "/":
-            return `${titleChunk} Your Partner in Web Development` || "Your Partner in Web Development";
+            return (
+              `${titleChunk} Your Partner in Web Development` ||
+              "Your Partner in Web Development"
+            );
           case "/services":
             return `${titleChunk} Services` || "Services";
           case "/faq":
@@ -40,6 +46,29 @@ export default {
             return `${titleChunk} Contact | Thank You` || "Contact | Thank You";
         }
       },
+      meta: [
+        {
+          name: "description",
+          content: () => {
+            switch (route.path) {
+              case "/":
+                return "This is the landing page of boyx.co.uk. Here a brief description of what Boyx offers is listed to the visitor.";
+              case "/services":
+                return "This page describes the services that we provide. Two packages are offered: Starter and Business.";
+              case "/faq":
+                return "This page provides answers to frequently asked questions.";
+              case "/portfolio":
+                return "This page provides an example of previous work. The previous work is a portfolio done for a web developer.";
+              case "/about":
+                return "This page gives information about Boyx Limited. The target audience of Boyx is listed and the company's purpose is listed.";
+              case "/contact":
+                return "This page provides a contact form for users to reach out. Once the form is submitted, the user is redirected to the thank you page.";
+              case "/thankyou":
+                return "This page confirms successful contact and thanks the user. After a brief period of time, the user is redirected to the thank you page.";
+            }
+          },
+        },
+      ],
     });
   },
 };

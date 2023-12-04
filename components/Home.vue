@@ -11,18 +11,18 @@
     <Transition>
       <section v-if="items[1]" class="features text-white">
         <div class="feature">
-          <h2>Custom Web Development</h2>
+          <h1>Custom Web Development</h1>
           <p>
             We build tailored solutions to meet your unique personal or business
             needs.
           </p>
         </div>
         <div class="feature">
-          <h2>Expert Consulting</h2>
+          <h1>Expert Consulting</h1>
           <p>We will guide you through the web development process.</p>
         </div>
         <div class="feature">
-          <h2>Cutting-Edge Technologies</h2>
+          <h1>Cutting-Edge Technologies</h1>
           <p>
             We stay up-to-date with the latest technologies to deliver top-notch
             solutions.
@@ -33,7 +33,7 @@
 
     <Transition>
       <Card v-if="items[2]" class="cta mb-5">
-        <h2>Curious about the process?</h2>
+        <h1>Curious about the process?</h1>
         <p>Find out on our services page.</p>
         <Button
           @click="$router.push('/services')"
@@ -45,7 +45,7 @@
 
     <Transition>
       <Card v-if="items[3]" class="cta">
-        <h2>Ready to get started?</h2>
+        <h1>Ready to get started?</h1>
         <p>Contact us today for a free consultation.</p>
         <Button
           @click="$router.push('/contact')"
