@@ -11,7 +11,7 @@
     <Transition>
       <section v-if="items[1]" class="features text-white">
         <div class="feature">
-          <h1>Custom Web Development</h1>
+          <h1>Custom Web Design - Berkshire</h1>
           <p>
             We build tailored solutions to meet your unique personal or business
             needs.
