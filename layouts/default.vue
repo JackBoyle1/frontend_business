@@ -29,8 +29,8 @@ export default {
         switch (route.path) {
           case "/":
             return (
-              `${titleChunk} Your Partner in Web Development | Berkshire` ||
-              "Your Partner in Web Development | Berkshire"
+              `${titleChunk} Your Partner in Web Development | London` ||
+              "Your Partner in Web Development | London"
             );
           case "/services":
             return `${titleChunk} Services` || "Services";

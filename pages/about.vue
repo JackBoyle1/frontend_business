@@ -11,7 +11,7 @@
   <Transition>
     <Card v-if="items[1]" name="" class="mb-3" roundedSuffix="3xl">
       <p class="text-base mb-2">
-        Welcome to our web development consultancy! We're based in Berkshire, England and specialize in creating
+        Welcome to our web development consultancy! We're based in London, England and specialize in creating
         personalized websites for individuals and small businesses.
       </p>
       <p class="text-base mb-2">
